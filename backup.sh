@@ -1,18 +1,13 @@
 #!/bin/bash
 
-# ### About this script
+# ### Über dieses Skript
 # Dieses Script dient dem Zweck, die Inhalte des Studienführers Physik der ZaPF zu sichern.
-# Die Internetseite des Studienführers ist <http://studienführer-physik.de>.
 # Dazu wird ein Skript des Projekts wikiteam genutzt, das automatisch alle Inhalte sichert.
 #
-# ### Author
-# Philipp Klaus <philipp.klaus →AT→ gmail.com>
-# 
-# ### Links / Quellen
-# * How to backup without access to the wiki server: <http://code.google.com/p/wikiteam/wiki/FAQ>
+# Mehr Informationen gibt es in der Datei README.md
 
-## zum debuggen diese Zeile einkommentieren:
-#set -x
+## Zum Debuggen diese Zeile einkommentieren:
+set -x
 
 ## ----- Konfiguration:
 BASE_URL="https://www.fs-maphy.uni-hannover.de"
