@@ -10,7 +10,7 @@
 set -x
 
 ## ----- Konfiguration:
-BASE_URL="https://www.fs-maphy.uni-hannover.de"
+BASE_URL="https://studienfuehrer.physnet.uni-hamburg.de"
 #EXPORT_URL=$BASE_URL"/w/index.php5?title=Spezial:Exportieren"
 API_URL=$BASE_URL"/w/api.php"
 BACKUP_FOLDER="studienfuehrer-$(date +%Y-%m-%d)"
@@ -23,6 +23,6 @@ DUMPGENERATOR_TOOL="dumpgenerator.py"
 curl -C - -O $DUMPGENERATOR_TOOL_URL
 ## Hier passiert die eigentliche Arbeit, das Backup des Wikis:
 python $DUMPGENERATOR_TOOL --api=$API_URL --xml --images --logs --path=$BACKUP_FOLDER
-tar czvf $BACKUP_FOLDER.tar.gz $BACKUP_FOLDER/*
+tar czvf $BACKUP_FOLDER.tar.gz $BACKUP_FOLDER/* $DUMPGENERATOR_TOOL
 ## Nach dem erstellen der gepackten Datei können wir den Ordner löschen:
 rm -rf $BACKUP_FOLDER
